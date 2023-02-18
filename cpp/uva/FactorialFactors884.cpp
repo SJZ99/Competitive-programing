@@ -6,12 +6,13 @@
 #define N 1000000
 using namespace std;
 
+int factors[N + 1] = {0};
+bitset<N + 1> isPrime;
+vector<int> primes;
+
 int main() { _
-    vector<int> primes;
-    int factors[N + 1] = {0};
-    bitset<N + 1> isPrime;
+    primes.reserve(78500);
     isPrime.flip();
-    // memset(isPrime, 1, (N + 1) * sizeof(bool));
 
     for(int i = 2; i <= N; ++i) {
         if(isPrime[i]) {
@@ -20,18 +21,23 @@ int main() { _
         }
 
         for(int prime : primes) {
-            isPrime[i * prime] = false;
+            if(INT_MAX / prime >= i && i * prime > N) break;
+            isPrime[i * prime] = 0;
             factors[i * prime] = factors[i] + 1;
-
+            // cout << factors[i * prime] << " ";
             if(i % prime == 0) break;
         }
 
     }
 
-    int tar;
+    for(int i = 2; i <= N; ++i) {
+        factors[i] += factors[i - 1];
+    }
+
+
+    int tar = 0;
     while(cin >> tar) {
         cout << factors[tar] << "\n";
     }
-
     return 0;
 }
