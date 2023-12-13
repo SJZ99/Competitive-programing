@@ -5,7 +5,7 @@ using namespace std;
 
 using llu = unsigned long long int;
 
-vector<vector<llu>> dis(501, vector<llu>(501, LONG_LONG_MAX));
+vector<vector<llu>> dis(501, vector<llu>(501, LLONG_MAX));
 
 void floyd(int n) {
     for(int i = 1; i <= n; ++i) {
@@ -37,7 +37,7 @@ int main() { _
     int a, b;
     for(int i = 0; i < q; ++i) {
         cin >> a >> b;
-        if(dis[a][b] >= LONG_LONG_MAX) {
+        if(dis[a][b] >= LLONG_MAX) {
             cout << "-1\n";
         } else {
             cout << dis[a][b] << "\n";

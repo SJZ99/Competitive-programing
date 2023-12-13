@@ -11,6 +11,26 @@
         "valarray": "cpp",
         "vector": "cpp",
         "*.tcc": "cpp",
-        "functional": "c"
-    }
+        "functional": "c",
+        "random": "cpp",
+        "cmath": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "rope": "cpp",
+        "complex": "cpp",
+        "iterator": "cpp",
+        "fstream": "cpp",
+        "iomanip": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "system_error": "cpp",
+        "thread": "cpp"
+    },
+    "code-runner.runInTerminal": true
+
 }

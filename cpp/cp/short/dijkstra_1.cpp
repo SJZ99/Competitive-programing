@@ -11,7 +11,7 @@ typedef struct {
 
 bool closed[N] = {0};
 priority_queue<pair<int, long long int>, vector<pair<int, long long int>>, cmp> pq;
-vector<long long int> dis(N, LONG_LONG_MAX);
+vector<long long int> dis(N, LLONG_MAX);
 vector<vector<pair<int, int>>> adj(N, vector<pair<int, int>>());
 vector<int> from(N, 0);
 int main() { _

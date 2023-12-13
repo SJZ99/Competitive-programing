@@ -21,9 +21,7 @@ bool bellman(int n) {
                     return true;
                 }
             }
-        }
-
-        
+        } 
     }
     return false;
 }

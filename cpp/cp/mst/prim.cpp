@@ -3,12 +3,48 @@
 #define N 100005
 
 using namespace std;
+using ll = long long int;
 
 typedef pair<int, int> CostTo;
 
 vector<vector<CostTo>> adj(N, vector<CostTo>());
 bool visited[N] = {0};
 priority_queue<CostTo, vector<CostTo>, greater<CostTo>> pq;
+
+ll prim(int n) {
+    pq.push({0, 1});
+
+    long long int total = 0;
+    int cnt = 0;
+    while(!pq.empty()) {
+        int curr = pq.top().second; 
+
+        if(visited[curr]) { 
+            pq.pop();
+            continue;
+        }
+
+        total += pq.top().first; pq.pop();
+        visited[curr] = true;
+        cnt++;
+
+        for(CostTo ct : adj[curr]) {
+            if(!visited[ct.second]) {
+                pq.push({ct.first, ct.second});
+            }
+        }
+
+        if(cnt == n) {
+            break;
+        }
+    }
+
+    if(cnt == n) {
+        return total;
+    } else {
+        return -1;
+    }
+}
 
 int main() { _
     int n, m;

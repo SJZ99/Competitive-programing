@@ -17,15 +17,9 @@ int main() { _
             } else {
                 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
             }
-
-            
-            
-            // cout << dp[i][j] << " ";
         }
-        // cout << "\n";
     }
 
-    // cout << dp[len1][len2] << "\n";
     if(dp[len1][len2] * 2 > len1) {
         cout << "Yes\n";
     } else {

@@ -1,14 +1,20 @@
 #include <bits/stdc++.h>
 #define _ cin.tie(0) -> sync_with_stdio(false);
-#define N (int) 1e5
 
 using namespace std;
+
+#define N (int) 1e5
 
 bitset<N + 1> isPrime;
 vector<int> primes;
 
-void eulur() {
+void init() {
+    primes.clear();
+    primes.reserve((int) 1e5);
+    isPrime.flip();
+}
 
+void eulur() {
     for(int i = 2; i < N; ++i) {
         if(isPrime[i]) primes.push_back(i);
         
@@ -21,7 +27,6 @@ void eulur() {
             }
         }
     }
-
 }
 
 bool is_prime(int x) {
@@ -30,7 +35,6 @@ bool is_prime(int x) {
     else {
         for(int i : primes) {
             if(x % i == 0) {
-                // cout << i << " ";
                 return false;
             }
         }
@@ -39,10 +43,8 @@ bool is_prime(int x) {
 }
 
 int main() { 
-    primes.clear();
-    primes.reserve(N / 16);
-    isPrime.flip();
-
+    
+    init();
     eulur();
 
     int q;
