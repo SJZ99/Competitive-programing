@@ -29,7 +29,8 @@
         "sstream": "cpp",
         "streambuf": "cpp",
         "system_error": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "limits": "cpp"
     },
     "code-runner.runInTerminal": true
 

@@ -36,7 +36,7 @@ int main() { _
     }
 
     for(int i = res.size() - 1; i >= 0; --i) {
-        cout << res[i] << " ";
+        cout << fixed << setprecision(4) << res[i] << " ";
     }
     return 0;
 }

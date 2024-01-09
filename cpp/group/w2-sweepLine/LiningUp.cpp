@@ -23,7 +23,6 @@ int main() { _
         ll a, b;
         vector<point> ps;
         vector<point> ps2;
-        ll origin = 0;
         while(in.size() > 1) {
             sscanf(in.c_str(), "%lld %lld", &a, &b);
             ps.push_back({a, b});

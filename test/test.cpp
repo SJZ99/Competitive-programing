@@ -7,7 +7,7 @@ using namespace std;
 using ll = long long int;
 
 int main() { _
-    cout << atan2(100, 0) * 180 / 3.1415926 << "\n";
+    
 
     return 0;
 }

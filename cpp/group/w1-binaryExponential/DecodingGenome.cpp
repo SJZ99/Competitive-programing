@@ -13,6 +13,7 @@ using matrix = vector<vec>;
 
 void mul(matrix& a, matrix& b, matrix& c) {
     int n = a.size(), m = b[0].size();
+    
     for(int i = 0; i < n; ++i) {
         for(int j = 0; j < m; ++j) {
             c[i][j] = 0;
