@@ -78,13 +78,6 @@ int main() { _
                 }
             }
         }
-        
-        // for(int i = 1; i < n; ++i) {
-        //     for(int j = 1; j <= finalState; ++j) {
-        //         cout << dp[i][j] << " ";
-        //     }
-        //     cout << "\n";
-        // }
 
         int minn = INT_MAX;
         for(int i = 1; i < n; ++i) {
